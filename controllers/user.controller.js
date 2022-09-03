@@ -8,7 +8,8 @@ module.exports.getRandomUser = (req, res) => {
 
 // get all user data
 module.exports.getAllUser = (req, res) => {
-    res.send(userData)
+    const { limit } = req.query;
+    res.json(userData.slice(0, limit))
 };
 
 //save data
@@ -28,6 +29,11 @@ module.exports.singleUpdateUser = (req, res) => {
     newUser.photoUrl = req.body.photoUrl;
     res.send(newUser)
 };
+
+//mutiple user data update
+module.exports.multipleUpdateUser = (req, res) => {
+
+}
 
 // delete user
 module.exports.deleteUser = (req, res) => {
