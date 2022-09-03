@@ -30,9 +30,10 @@ module.exports.singleUpdateUser = (req, res) => {
     res.send(newUser)
 };
 
-//mutiple user data update
+//multiple user data update
 module.exports.multipleUpdateUser = (req, res) => {
-
+    const { } = req.query;
+    res.send(req.query)
 }
 
 // delete user
